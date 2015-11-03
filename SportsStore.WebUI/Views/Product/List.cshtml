@@ -8,10 +8,10 @@
 }
 @foreach (var p in Model.Products)
 {
-    <div class="well">
+    @*<div class="well">
         @*<h3>@p.Name</h3>
         @p.Description
-        <h4>@p.Price.ToString("c")</h4>*@
+        <h4>@p.Price.ToString("c")</h4>
 
         <h3>
             <strong>@p.Name</strong>
@@ -20,7 +20,9 @@
             </span>
         </h3>
         <span class="lead"> @p.Description</span> 
-    </div>
+    </div>*@
+
+    @Html.Partial("ProductSummary",p)
 }
 
 
