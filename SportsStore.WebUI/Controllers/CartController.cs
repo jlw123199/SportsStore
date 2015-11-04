@@ -48,6 +48,12 @@ namespace SportsStore.WebUI.Controllers
             }
             return RedirectToAction("Index", new { returnUrl });
         }
+
+        public PartialViewResult Summary(Cart cart)
+        {
+            return PartialView(cart);
+        }
+
         private Cart GetCart()
         {
             Cart cart = (Cart)Session["Cart"];
